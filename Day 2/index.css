@@ -1,0 +1,121 @@
+.container {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background: #3FAF82;
+  border-radius: 3px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+}
+.button {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.button .button__lineOne,
+.button .button__lineTwo,
+.button .button__lineThree {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.button .button__lineOne {
+  top: 23%;
+}
+.button .button__lineOne-active {
+  animation: lineOne-animation 0.5s ease-in-out forwards;
+}
+.button .button__lineOne-rev {
+  animation: lineOne-animation-rev 0.5s ease-in-out forwards;
+}
+.button .button__lineTwo {
+  top: 46%;
+}
+.button .button__lineTwo-active {
+  animation: lineTwo-animation 0.5s ease-in-out forwards;
+}
+.button .button__lineTwo-rev {
+  animation: lineTwo-animation-rev 0.5s ease-in-out forwards;
+}
+.button .button__lineThree {
+  top: 68%;
+}
+.button .button__lineThree-active {
+  animation: lineThree-animation 0.5s ease-in-out forwards;
+}
+.button .button__lineThree-rev {
+  animation: lineThree-animation-rev 0.5s ease-in-out forwards;
+}
+@keyframes lineOne-animation {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+}
+@keyframes lineOne-animation-rev {
+  0% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+@keyframes lineTwo-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes lineTwo-animation-rev {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes lineThree-animation {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+}
+@keyframes lineThree-animation-rev {
+  0% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
