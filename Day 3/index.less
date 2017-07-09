@@ -1,0 +1,134 @@
+.center(@width, @height) {
+  top: 50%;
+  left: 50%;
+  margin-left: -(@width/2);
+  margin-top: -(@height/2);
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: #272C34;
+}
+
+.spyglass {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.landscape {
+  position: relative;
+  height: 300px;
+  width: 300px;
+
+  .landscape__sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #7DDFFC;
+  }
+
+  .landscape__ground {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    z-index: 2;
+    background: #F0DE75;
+  }
+
+  .landscape__sun {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    left: -50px;
+    border-radius: 50%;
+    background: yellow;
+    z-index: 3;
+    animation: sun-animation 4s infinite;
+  }
+
+}
+
+.spyglass-center {
+  .center(300px, 300px);
+}
+
+.pyramid {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  .pyramid__leftSide {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 3;
+    background: #F4F4F4;
+    clip-path: polygon(50% 0%, 60% 100%, 100% 100%);
+    animation: rightSide-animation 4s infinite;
+  }
+
+  .pyramid__rightSide {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 3;
+    background: #F4F4F4;
+    clip-path: polygon(50% 0%, 0% 100%, 60% 100%);
+    animation: rightSide-animation 4s infinite reverse;
+  }
+
+}
+
+@keyframes sun-animation {
+  0% {
+    background: #F57209;
+    top: 40%;
+    left: -50px;
+  }
+
+  30% {
+    background: #FFEF00;
+    top: 10%;
+    left: 30%;
+  }
+
+  70% {
+    background: #FFEF00;
+  }
+
+  100% {
+    background: #F57209;
+    top: 40%;
+    left: 100% + 50px;
+  }
+}
+
+@keyframes rightSide-animation {
+  0% {
+    background: #272C34;
+  }
+
+  30% {
+    background: #F4F4F4;
+  }
+
+  70% {
+    background: #DDDADA;
+  }
+
+  100% {
+    background: #272C34;
+  }
+}
+
+.pyramid-center {
+  .center(100px, 100px);
+}
