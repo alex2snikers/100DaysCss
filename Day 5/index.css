@@ -1,0 +1,186 @@
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: #42A7A1;
+}
+.statistics {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  flex-direction: column;
+  margin-top: -150px;
+  margin-left: -150px;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #fff;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.statistics .statistics__header {
+  height: 80px;
+  background: #F1BA64;
+}
+.statistics .statistics__header .statistics__name {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.statistics .statistics__header .statistics__period {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.statistics .statistics__header .statistics__type {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.statistics .statistics__header .statistics__value {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.statistics .statistics__description {
+  display: flex;
+  height: 50px;
+  background: #fff;
+  align-items: center;
+  justify-content: flex-end;
+}
+.statistics .statistics__description .statistics__firstProduct {
+  display: flex;
+  width: 60px;
+  height: 30px;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10px;
+}
+.statistics .statistics__description .statistics__firstProduct .statistics__firstProductIcon {
+  width: 12px;
+  height: 6px;
+  background: #FA7373;
+}
+.statistics .statistics__description .statistics__firstProduct .statistics__firstProductName {
+  font-weight: 100;
+  font-size: 10px;
+  color: grey;
+}
+.statistics .statistics__description .statistics__secondProduct {
+  display: flex;
+  width: 60px;
+  height: 30px;
+  justify-content: space-around;
+  align-items: center;
+}
+.statistics .statistics__description .statistics__secondProduct .statistics__secondProductIcon {
+  width: 12px;
+  height: 6px;
+  background: #7BA2FF;
+}
+.statistics .statistics__description .statistics__secondProduct .statistics__secondProductName {
+  display: block;
+  font-weight: 100;
+  font-size: 10px;
+  color: grey;
+}
+.statistics .statistics__diagram {
+  position: relative;
+  height: 120px;
+  background: #fff;
+}
+.statistics .statistics__diagram .statistics__lineOne,
+.statistics .statistics__diagram .statistics__lineTwo,
+.statistics .statistics__diagram .statistics__lineThree {
+  position: absolute;
+  height: 1px;
+  background: #F2F2F2;
+  transform: scale(0.9);
+}
+.statistics .statistics__diagram .statistics__lineOne {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.statistics .statistics__diagram .statistics__lineTwo {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.statistics .statistics__diagram .statistics__lineThree {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.statistics .statistics__diagram .statistics__graphicOne {
+  fill: none;
+  stroke: #FA7373;
+  stroke-width: 2;
+}
+.statistics .statistics__diagram .statistics__graphicTwo {
+  fill: none;
+  stroke: #7BA2FF;
+  stroke-width: 2;
+}
+.statistics .points {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  top: 0;
+}
+.statistics .points .points__1-1,
+.statistics .points .points__1-2,
+.statistics .points .points__1-3,
+.statistics .points .points__1-4,
+.statistics .points .points__1-5,
+.statistics .points .points__1-6,
+.statistics .points .points__1-7 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FA7373;
+}
+.statistics .points .points__1-1 {
+  top: 47px;
+  left: 17px;
+}
+.statistics .points .points__1-2 {
+  top: 18px;
+  left: 67px;
+}
+.statistics .points .points__1-3 {
+  top: 47px;
+  left: 112px;
+}
+.statistics .points .points__1-3:hover {
+  visibility: visible;
+  background: yellow;
+}
+.statistics .statistics__days {
+  display: flex;
+  height: 50px;
+  background: #fff;
+  justify-content: space-around;
+  align-items: center;
+}
+.statistics .statistics__days .day {
+  font-size: 12px;
+  color: #949494;
+  line-height: 30px;
+  text-transform: uppercase;
+}
