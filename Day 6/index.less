@@ -1,0 +1,189 @@
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0,0,0,0.3);
+  background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+}
+
+.profile {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.3);
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #786450;
+
+  .avatar {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 100%;
+
+    .image {
+
+      .avatar__circleOne {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 20px;
+        left: 50%;
+        margin-left: -50px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #786450 #786450 #786450 transparent;
+        transition: all 1.5s ease-in-out;
+      }
+
+      .avatar__circleTwo {
+        position: absolute;
+        width: 104px;
+        height: 104px;
+        top: 18px;
+        left: 50%;
+        margin-left: -52px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #786450 transparent  #786450 #786450;
+        transition: all 1.5s ease-in-out;
+      }
+
+      .avatar__img {
+        position: absolute;
+        width: 96px;
+        height: 96px;
+        top: 22px;
+        left: 50%;
+        margin-left: -48px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .avatar__circleOne {
+          transform: rotate(360deg);
+        }
+
+        .avatar__circleTwo {
+          transform: rotate(-360deg);
+        }
+
+      }
+
+    }
+
+    .avatar__name {
+      position: absolute;
+      font-size: 14px;
+      top: 130px;
+      left: 29%;
+    }
+
+    .avatar__job {
+      position: absolute;
+      font-size: 10px;
+      top: 144px;
+      left: 38%;
+    }
+
+  .button {
+
+    .button__follow, .button__message {
+      position: absolute;
+      width: 90px;
+      top: 200px;
+      left: 50%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      border: solid 1px #786450;
+      border-radius: 15px;
+      box-sizing: border-box;
+      transition: all .4s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background: #786450;
+        color: #fff;
+      }
+
+    }
+
+    .button__follow {
+      top: 200px;
+      left: 50%;
+      margin-left: -45px;
+    }
+
+    .button__message {
+      top: 230px;
+      left: 50%;
+      margin-left: -45px;
+    }
+
+  }
+
+  }
+
+  .posts,
+  .likes,
+  .follower {
+    position: absolute;
+    display: flex;
+    width: 99px;
+    height: 99px;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F5E8DF;
+    transition: all .4s ease-in-out  ;
+
+    &:hover {
+      background: #E1CFC2;
+      cursor: pointer;
+    }
+
+  }
+
+  .post {
+    top: 0;
+  }
+
+  .likes {
+    top: 100px;
+  }
+
+  .follower {
+    top: 200px;
+  }
+
+  .posts__value,
+  .likes__value,
+  .follower__value {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .posts__name,
+  .likes__name,
+  .follower__name {
+    font-size: 11px;
+  }
+
+}
